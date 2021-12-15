@@ -1,0 +1,89 @@
+
+@iterations: 100;
+
+.util-loop (@i) when (@i > -1) {
+  .m-@{i} {
+    margin:~"@{i}px";
+  }
+
+  .mt-@{i} {
+    margin-top:~"@{i}px";
+  }
+
+  .mb-@{i} {
+    margin-bottom:~"@{i}px";
+  }
+
+  .mr-@{i} {
+    margin-right:~"@{i}px";
+  }
+
+  .ml-@{i} {
+    margin-left:~"@{i}px";
+  }
+
+  .mx-@{i} {
+    margin-left:~"@{i}px";
+    margin-right:~"@{i}px";
+  }
+
+  .my-@{i} {
+    margin-top:~"@{i}px";
+    margin-bottom:~"@{i}px";
+  }
+
+  .p-@{i} {
+    padding:~"@{i}px";
+  }
+
+  .pt-@{i} {
+    padding-top:~"@{i}px";
+  }
+
+  .px-@{i} {
+    padding-right:~"@{i}px";
+    padding-left:~"@{i}px";
+  }
+
+  .py-@{i} {
+    padding-bottom:~"@{i}px";
+    padding-top:~"@{i}px";
+  }
+
+  .pb-@{i} {
+    padding-bottom:~"@{i}px";
+  }
+
+  .pr-@{i} {
+    padding-right:~"@{i}px";
+  }
+
+  .pl-@{i} {
+    padding-left:~"@{i}px";
+  }
+
+  .fs-@{i} {
+    font-size:~"@{i}px" !important;
+  }
+
+  .br-@{i} {
+    border-radius:~"@{i}px";
+  }
+
+  .util-loop(@i - 1);
+}
+
+
+.util-loop (@iterations);
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
