@@ -1,0 +1,108 @@
+:root {
+
+    --horizontal-antmenu--bg: var(--background);
+    --horizontal-antmenu-color: var(--text-color);
+    --horizontal-antmenu-border--color: transparent;
+  
+    --horizontal-antmenu-item--padding--x: 0px;
+    --horizontal-antmenu-item--padding--y: 20px;
+    --horizontal-antmenu-item--bg: var(--background);
+    --horizontal-antmenu-item--color: var(--text-color);
+    --horizontal-antmenu-item--bordercolor: transparent;
+    --horizontal-antmenu-item-icon-color: var(--text-color);
+    --horizontal-antmenu-item-anchor-color: var(--text-color);
+    //  Hover
+    --horizontal-antmenu-item-hover--color: var(--color1);
+    --horizontal-antmenu-item-hover--bg: var(--foreground);
+    --horizontal-antmenu-item-hover--bordercolor: var(--color1);
+    --horizontal-antmenu-item-icon-hover-color: var(--color1);
+    --horizontal-antmenu-item-anchor-hover-color: var(--color1);
+  
+    //  Selected
+    --horizontal-antmenu-item-selected--color: var(--color1);
+    --horizontal-antmenu-item-selected--bg: var(--foreground);
+    --horizontal-antmenu-item-selected--bordercolor: var(--color1);
+    --horizontal-antmenu-item-icon-selected-color: var(--color1);
+    --horizontal-antmenu-item-anchor-selected-color: var(--color1);
+  
+    //  Disabled
+    --horizontal-antmenu-item-disabled--color: var(--text-color-light);
+    --horizontal-antmenu-item-disabled--bg: var(--background);
+    --horizontal-antmenu-item-disabled--bordercolor: var(--color1);
+    --horizontal-antmenu-item-icon-disabled-color: var(--text-color-light);
+    --horizontal-antmenu-item-anchor-disabled-color: var(--text-color-light);
+  }
+  
+  .ant-menu.ant-menu-root.ant-menu-light.ant-menu-horizontal,
+  .ant-menu.ant-menu-root.ant-menu-dark.ant-menu-horizontal {
+    background-color: var(--horizontal-antmenu--bg);
+    border-bottom-color: var(--horizontal-antmenu-border--color);
+    color: var(--background);
+  
+    .ant-menu-submenu.ant-menu-submenu-horizontal {
+      border-bottom-color: var(--horizontal-antmenu-item--bordercolor);
+  
+      &:hover {
+        border-bottom-color: var(--horizontal-antmenu-item-hover--bordercolor);
+      }
+    }
+  
+    .ant-menu-item,
+    .ant-menu-submenu>.ant-menu-submenu-title {
+      padding: var(--horizontal-antmenu-item--padding--x) var(--horizontal-antmenu-item--padding--y);
+      background-color: var(--horizontal-antmenu-item--bg);
+      color: var(--horizontal-antmenu-item--color);
+      border-bottom-color: var(--horizontal-antmenu-item--bordercolor);
+  
+      a {
+        color: var(--horizontal-antmenu-item-anchor-color);
+  
+        &:hover {
+          color: var(--horizontal-antmenu-item-anchor-hover-color);
+        }
+      }
+  
+      .anticon {
+        color: var(--horizontal-antmenu-item-icon-color);
+      }
+  
+      &:hover {
+        background-color: var(--horizontal-antmenu-item-hover--bg);
+        color: var(--horizontal-antmenu-item-hover--color);
+        border-bottom-color: var(--horizontal-antmenu-item-hover--bordercolor);
+  
+        .anticon {
+          color: var(--horizontal-antmenu-item-icon-hover-color);
+        }
+      }
+  
+      &.ant-menu-item-selected {
+        background-color: var(--horizontal-antmenu-item-selected--bg);
+        color: var(--horizontal-antmenu-item-selected--color);
+        border-bottom-color: var(--horizontal-antmenu-item-selected--bordercolor);
+  
+        .anticon {
+          color: var(--horizontal-antmenu-item-icon-selected-color);
+        }
+      }
+  
+      &.ant-menu-item-disabled,
+      &:hover.ant-menu-item-disabled {
+        background-color: var(--horizontal-antmenu-item-disabled--bg);
+        color: var(--horizontal-antmenu-item-disabled--color);
+        border-bottom-color: var(--horizontal-antmenu-item-disabled--bordercolor);
+  
+        .anticon {
+          color: var(--horizontal-antmenu-item-icon-disabled-color);
+        }
+  
+        a {
+          color: var(--horizontal-antmenu-item-disabled--color);
+  
+          &:hover {
+            color: var(--horizontal-antmenu-item-disabled--color);
+          }
+        }
+      }
+    }
+  }

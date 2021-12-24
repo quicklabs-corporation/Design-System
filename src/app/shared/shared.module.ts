@@ -60,6 +60,7 @@ import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { HotkeyModule } from 'angular2-hotkeys';
 import { NzMentionModule } from 'ng-zorro-antd/mention';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -132,7 +133,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzMessageModule,
     NzPaginationModule,
     NzCalendarModule,
-    NzMentionModule
+    NzMentionModule,
+    NzBreadCrumbModule
   ],
   exports: [
     NzSelectModule,
@@ -191,6 +193,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => {
     NzToolTipModule,
     NzCalendarModule,
     NzMentionModule,
+    NzBreadCrumbModule
   ],
   providers: [{
     provide: NZ_ICONS,

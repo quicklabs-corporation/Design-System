@@ -1,0 +1,42 @@
+:root {
+  --breadcrumb-seperator-color: var(--text-color-light);
+  --breacrumb-color: var(--text-color-light);
+  --breadcrumb-color-active: var(--text-color-dark);
+  --breadcrumb-icon-color: var(--color1);
+  --breacrumb-hover-color: var(--color1);
+}
+
+.ant-breadcrumb {
+  nz-breadcrumb-item {
+    .ant-breadcrumb-link {
+      color: var(--breacrumb-color);
+
+      .anticon {
+        color: var(--breadcrumb-icon-color);
+      }
+
+      a {
+        color: var(--breacrumb-color);
+
+        &:hover,
+        &:active,
+        &:visited {
+          color: var(--breacrumb-hover-color);
+        }
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: var(--breadcrumb-seperator-color);
+    }
+
+    &:last-child {
+      .ant-breadcrumb-link,
+      .ant-breadcrumb-link a {
+        color: var(--breadcrumb-color-active);
+        font-weight: 400;
+      }
+    }
+  }
+
+}

@@ -1,24 +1,27 @@
 :root {
-  --button-background: var(--background-support1);
-  --button-hover__background: var(--background-primary);
+  --button-background: var(--foreground);
+  --button-hover__background: var(--foreground);
   --button-color: var(--text-color);
   --button-hover__color: var(--text-color);
   --button-border__size: 1px;
-  --button-border__color: var(--background-primary);
-  --button-hover__border-color: var(--background-support1);
+  --button-border__color: var(--border-color);
+  --button-hover__border-color: var(--border-color);
   --button-border__style: solid;
   --button-border__radius: var(--base-boder-radius);
   --padding-x: 12px;
   --padding-y: 6px;
   --padding-lg-x: 24px;
   --padding-lg-y: 12px;
-  // primary color variables
-  --button-primary__background: blue;
-  --button-primary-hover__background: darkblue;
-  --button-primary__color: white;
+  --button-primary__background: var(--color2);
+  --button-primary-hover__background: var(--color4);
+  --button-primary__color: var(--text-color);
   --button-hover-primary__color: white;
-  --button-primary__border-color: blue;
-  --button-hover-primary__border-color: blue;
+  --button-primary__border-color: var(--color2);
+  --button-hover-primary__border-color: var(--color2);
+  --button-icon-fontsize: 20px;
+  --button-icon-color: var(--text-color);
+  --button-icon-fontsize__hover: 20px;
+  --button-icon-color__hover:white;
 }
 
 .ant-btn {
@@ -57,6 +60,19 @@
       background-color: var(--button-primary-hover__background);
       color: var(--button-hover-primary__color);
       border-color: var(--button-hover-primary__border-color);
+      transition: all 0.5s ease-in-out;
+      .anticon {
+        font-size: var(--button-icon-fontsize__hover);
+        color: var(--button-icon-color__hover);
+        transition: all 0.5s ease-in-out;
+      }
     }
+  }
+
+  .anticon {
+    font-size: var(--button-icon-fontsize);
+    color: var(--button-icon-color);
+    vertical-align: bottom;
+    transition: all 0.5s ease-in-out;
   }
 }

@@ -1,0 +1,116 @@
+:root {
+  --vertical-antmenu--bg: var(--background);
+  --vertical-antmenu-color: var(--text-color);
+  --vertical-antmenu-border--color: transparent;
+
+
+  --vertical-antmenu-item--padding--x: 0px;
+  --vertical-antmenu-item--padding--y: 20px;
+  --vertical-antmenu-item--bg: var(--background);
+  --vertical-antmenu-item--color: var(--text-color);
+  --vertical-antmenu-item--bordercolor: transparent;
+  --vertical-antmenu-item-icon-color: var(--text-color);
+  --vertical-antmenu-item-anchor-color: var(--text-color);
+  //  Hover
+  --vertical-antmenu-item-hover--color: var(--color1);
+  --vertical-antmenu-item-hover--bg: var(--foreground);
+  --vertical-antmenu-item-hover--bordercolor: var(--color1);
+  --vertical-antmenu-item-icon-hover-color: var(--color1);
+  --vertical-antmenu-item-anchor-hover-color: var(--color1);
+
+  //  Selected
+  --vertical-antmenu-item-selected--color: var(--color1);
+  --vertical-antmenu-item-selected--bg: var(--foreground);
+  --vertical-antmenu-item-selected--bordercolor: var(--color1);
+  --vertical-antmenu-item-icon-selected-color: var(--color1);
+  --vertical-antmenu-item-anchor-selected-color: var(--color1);
+
+  //  Disabled
+  --vertical-antmenu-item-disabled--color: var(--text-color-light);
+  --vertical-antmenu-item-disabled--bg: var(--background);
+  --vertical-antmenu-item-disabled--bordercolor: var(--color1);
+  --vertical-antmenu-item-icon-disabled-color: var(--text-color-light);
+  --vertical-antmenu-item-anchor-disabled-color: var(--text-color-light);
+}
+
+.ant-menu.ant-menu-root.ant-menu-light.ant-menu-vertical,
+.ant-menu.ant-menu-root.ant-menu-dark.ant-menu-vertical {
+  background-color: var(--vertical-antmenu--bg);
+  border-right-color: var(--vertical-antmenu-border--color);
+  color: var(--background);
+
+  .ant-menu-submenu.ant-menu-submenu-vertical {
+    border-right-color: var(--vertical-antmenu-item--bordercolor);
+
+    .ant-menu-submenu-arrow {
+      color: var(--vertical-antmenu-item--color);
+    }
+
+    &:hover {
+      border-right-color: var(--vertical-antmenu-item-hover--bordercolor);
+
+      .ant-menu-submenu-arrow {
+        color: var(--vertical-antmenu-item-hover--color)
+      }
+    }
+  }
+
+  .ant-menu-item,
+  .ant-menu-submenu.ant-menu-submenu-vertical>.ant-menu-submenu-title {
+    padding: var(--vertical-antmenu-item--padding--x) var(--vertical-antmenu-item--padding--y);
+    background-color: var(--vertical-antmenu-item--bg);
+    color: var(--vertical-antmenu-item--color);
+    border-right-color: var(--vertical-antmenu-item--bordercolor);
+
+    a {
+      color: var(--vertical-antmenu-item-anchor-color);
+
+      &:hover {
+        color: var(--vertical-antmenu-item-anchor-hover-color);
+      }
+    }
+
+    .anticon {
+      color: var(--vertical-antmenu-item-icon-color);
+    }
+
+    &:hover {
+      background-color: var(--vertical-antmenu-item-hover--bg);
+      color: var(--vertical-antmenu-item-hover--color);
+      border-right-color: var(--vertical-antmenu-item-hover--bordercolor);
+
+      .anticon {
+        color: var(--vertical-antmenu-item-icon-hover-color);
+      }
+    }
+
+    &.ant-menu-item-selected {
+      background-color: var(--vertical-antmenu-item-selected--bg);
+      color: var(--vertical-antmenu-item-selected--color);
+      border-right-color: var(--vertical-antmenu-item-selected--bordercolor);
+
+      .anticon {
+        color: var(--vertical-antmenu-item-icon-selected-color);
+      }
+    }
+
+    &.ant-menu-item-disabled,
+    &:hover.ant-menu-item-disabled {
+      background-color: var(--vertical-antmenu-item-disabled--bg);
+      color: var(--vertical-antmenu-item-disabled--color);
+      border-right-color: var(--vertical-antmenu-item-disabled--bordercolor);
+
+      .anticon {
+        color: var(--vertical-antmenu-item-icon-disabled-color);
+      }
+
+      a {
+        color: var(--vertical-antmenu-item-disabled--color);
+
+        &:hover {
+          color: var(--vertical-antmenu-item-disabled--color);
+        }
+      }
+    }
+  }
+}

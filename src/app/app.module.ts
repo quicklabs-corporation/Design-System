@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA, APP_INITIALIZER } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,7 @@ import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
 import {HotkeyModule} from 'angular2-hotkeys';
 
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -41,7 +42,8 @@ registerLocaleData(en);
     HttpClientModule,
     NzIconModule.forRoot(icons),
     HotkeyModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [{
     provide: NZ_ICONS,
