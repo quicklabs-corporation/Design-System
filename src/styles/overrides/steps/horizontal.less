@@ -1,0 +1,144 @@
+:root {
+
+  // finished step
+  --ant-steps-horizontal-item-finish-icon-bg: var(--color2);
+  --ant-steps-horizontal-item-finish-icon-border: var(--color2);
+  --ant-steps-horizontal-item-finish-icon-color: var(--text-color);
+  --ant-steps-horizontal-item-finish-icon-fs: var(--base-font-size);
+  --ant-steps-horizontal-item-finish-tail-color: var(--color2);
+  --ant-steps-horizontal-item-finish-title-color: var(--text-color);
+  --ant-steps-horizontal-item-finish-description-color: var(--text-color-light);
+  --ant-steps-horizontal-item-finish-subtitle-color: var(--text-color-light);
+
+  //   active step
+  --ant-steps-horizontal-item-active-icon-bg: var(--background);
+  --ant-steps-horizontal-item-active-icon-border: var(--color2);
+  --ant-steps-horizontal-item-active-icon-color: var(--color2);
+  --ant-steps-horizontal-item-active-icon-fs: var(--base-font-size);
+  --ant-steps-horizontal-item-active-tail-color: var(--color2);
+  --ant-steps-horizontal-item-active-title-color: var(--text-color);
+  --ant-steps-horizontal-item-active-description-color: var(--text-color-light);
+  --ant-steps-horizontal-item-active-subtitle-color: var(--text-color-light);
+
+  //   wait step
+  --ant-steps-horizontal-item-wait-icon-bg: var(--background);
+  --ant-steps-horizontal-item-wait-icon-border: var(--border-color);
+  --ant-steps-horizontal-item-wait-icon-color: var(--text-color);
+  --ant-steps-horizontal-item-wait-icon-fs: var(--base-font-size);
+  --ant-steps-horizontal-item-wait-tail-color: var(--border-color);
+  --ant-steps-horizontal-item-wait-title-color: var(--text-color-light);
+  --ant-steps-horizontal-item-wait-description-color: var(--text-color-light);
+  --ant-steps-horizontal-item-wait-subtitle-color: var(--text-color-light);
+}
+
+
+.ant-steps.ant-steps-horizontal.ant-steps-label-horizontal {
+
+  .ant-steps-item {
+    &.ant-steps-item-finish {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          background-color: var(--ant-steps-horizontal-item-finish-icon-bg);
+          border-color: var(--ant-steps-horizontal-item-finish-icon-border);
+
+          .ant-steps-icon {
+            color: var(--ant-steps-horizontal-item-finish-icon-color);
+
+            .anticon {
+              font-size: var(--base-font-size);
+            }
+          }
+        }
+
+        .ant-steps-item-content {
+          .ant-steps-item-title {
+            color: var(--ant-steps-horizontal-item-finish-title-color);
+
+            .ant-steps-item-subtitle {
+              color: var(--ant-steps-horizontal-item-finish-subtitle-color);
+            }
+
+            &:after {
+              background-color: var(--ant-steps-horizontal-item-finish-tail-color);
+            }
+          }
+
+          .ant-steps-item-description {
+            color: var(--ant-steps-horizontal-item-finish-description-color);
+          }
+        }
+      }
+    }
+
+    &.ant-steps-item-wait {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          background-color: var(--ant-steps-horizontal-item-wait-icon-bg);
+          border-color: var(--ant-steps-horizontal-item-wait-icon-border);
+
+          .ant-steps-icon {
+            color: var(--ant-steps-horizontal-item-wait-icon-color);
+
+            .anticon {
+              font-size: var(--base-font-size);
+            }
+          }
+        }
+
+        .ant-steps-item-content {
+          .ant-steps-item-title {
+            color: var(--ant-steps-horizontal-item-wait-title-color);
+
+            .ant-steps-item-subtitle {
+              color: var(--ant-steps-horizontal-item-wait-subtitle-color);
+            }
+
+            &:after {
+              background-color: var(--ant-steps-horizontal-item-wait-tail-color);
+            }
+          }
+
+          .ant-steps-item-description {
+            color: var(--ant-steps-horizontal-item-wait-description-color);
+          }
+        }
+      }
+    }
+
+    &.ant-steps-item-active {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          background-color: var(--ant-steps-horizontal-item-active-icon-bg);
+          border-color: var(--ant-steps-horizontal-item-active-icon-border);
+
+          .ant-steps-icon {
+            color: var(--ant-steps-horizontal-item-active-icon-color);
+
+            .anticon {
+              font-size: var(--base-font-size);
+            }
+          }
+        }
+
+        .ant-steps-item-content {
+          .ant-steps-item-title {
+            color: var(--ant-steps-horizontal-item-active-title-color);
+
+            .ant-steps-item-subtitle {
+              color: var(--ant-steps-horizontal-item-active-subtitle-color);
+            }
+
+            &:after {
+              background-color: var(--ant-steps-horizontal-item-active-tail-color);
+            }
+          }
+
+          .ant-steps-item-description {
+            color: var(--ant-steps-horizontal-item-active-description-color);
+          }
+        }
+      }
+    }
+  }
+
+}

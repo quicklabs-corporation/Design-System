@@ -1,8 +1,14 @@
 <div class="components-wrapper">
     <div cdkDragBoundary=".components-wrapper" cdkDrag>
-      <nz-pagination [nzPageIndex]="1" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="10" nzShowQuickJumper [nzShowTotal]="totalTemplate"></nz-pagination><ng-template #totalTemplate let-total>Total {{ total }} items</ng-template>
+      <nz-steps [nzCurrent]="1">
+        <nz-step nzTitle="Finished" nzDescription="This is a description."></nz-step>
+        <nz-step nzTitle="In Progress" nzSubtitle="Left 00:00:08" nzDescription="This is a description."></nz-step>
+        <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
+      </nz-steps>
     </div>
 </div>
+
+<!-- <nz-pagination [nzPageIndex]="1" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="10" nzShowQuickJumper [nzShowTotal]="totalTemplate"></nz-pagination><ng-template #totalTemplate let-total>Total {{ total }} items</ng-template> -->
 
 <!-- <div style="width: 300px;">
   <ul nz-menu nzMode="inline">
