@@ -1,7 +1,7 @@
 :root {
   --ant-pagination-bg: transparent;
   --ant-pagination-color: var(--text-color);
-  --ant-pagination-fs: 14px;
+  --ant-pagination-fs: var(--base-font-size);
 
   --ant-pagination-disabled-bg: var(--foreground);
 
@@ -12,6 +12,17 @@
   --ant-pagination-prevnext-bg--hover: var(--color1);
   --ant-pagination-prevnext-color--hover: var(--white);
   --ant-pagination-prevnext-borderc--hover: var(--color1);
+
+  --ant-pagination-disabled-bg: var(--foreground);
+  --ant-pagination-disabled-color: var(--text-color);
+  --ant-pagination-disabled-borderc: var(--border-color);
+
+  --ant-pagination-item-active-bg: var(--color1);
+  --ant-pagination-item-active-color: var(--white);
+  --ant-pagination-item-active-borderc: var(--color1);
+
+  --ant-pagination-select-bg: var(--background);
+  --ant-pagination-select-font: var(--base-font-size);
 }
 
 .ant-pagination {
@@ -19,23 +30,79 @@
   color: var(--ant-pagination-color);
 
   .ant-pagination-total-text {
+    font-family: var(--primary-font);
     font-size: var(--ant-pagination-fs);
   }
 
   .ant-pagination-prev,
-  .ant-pagination-next {
-    button.ant-pagination-item-link {
+  .ant-pagination-next,
+  .ant-pagination-item {
+    &:hover {
+      border-color: var(--ant-pagination-item-active-borderc);
+    }
+
+    &.ant-pagination-disabled {
+
+      button.ant-pagination-item-link,
+      a {
+        background-color: var(--ant-pagination-disabled-bg);
+        color: var(--ant-pagination-disabled-color);
+        border-color: var(--ant-pagination-disabled-borderc);
+        font-size: var(--ant-pagination-fs);
+        .anticon {
+          color: var(--ant-pagination-disabled-color);
+          font-size: var(--ant-pagination-fs);
+        }
+
+        &:hover,
+        &:active {
+          background-color: var(--ant-pagination-disabled-bg);
+          color: var(--ant-pagination-disabled-color);
+          border-color: var(--ant-pagination-disabled-borderc);
+
+          .anticon {
+            color: var(--ant-pagination-disabled-color);
+          }
+        }
+      }
+    }
+
+    &.ant-pagination-item-active {
+      border-color: var(--ant-pagination-item-active-borderc);
+
+      button.ant-pagination-item-link,
+      a {
+        background-color: var(--ant-pagination-item-active-bg);
+        color: var(--ant-pagination-item-active-color);
+        border-color: var(--ant-pagination-item-active-borderc);
+
+        .anticon {
+          color: var(--ant-pagination-item-active-color);
+          font-size: var(--ant-pagination-fs);
+        }
+
+        &:hover,
+        &:active {
+          background-color: var(--ant-pagination-item-active-bg);
+          color: var(--ant-pagination-item-active-color);
+          border-color: var(--ant-pagination-item-active-borderc);
+
+          .anticon {
+            color: var(--ant-pagination-item-active-color);
+          }
+        }
+      }
+    }
+
+    button.ant-pagination-item-link,
+    a {
       background-color: var(--ant-pagination-prevnext-bg);
       color: var(--ant-pagination-prevnext-color);
       border-color: var(--ant-pagination-prevnext-borderc);
-
+      font-size: var(--ant-pagination-fs);
       .anticon {
         color: var(--ant-pagination-prevnext-color);
         font-size: var(--ant-pagination-fs);
-      }
-
-      &.disabled {
-
       }
 
       &:hover,
@@ -52,4 +119,12 @@
   }
 
 
+  .ant-pagination-options {
+    .ant-pagination-options-size-changer.ant-select.ant-select-show-arrow.ant-select-single {
+      background-color: var();
+      .ant-select-selector {
+             
+      }
+    }
+  }
 }
